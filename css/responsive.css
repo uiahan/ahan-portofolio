@@ -1,0 +1,112 @@
+@media (min-width: 768px) {
+    .container-fluid {
+        margin-left: 14rem;
+        margin-right: 14rem;
+        margin-top: 15px;
+    }
+
+    .card-skills {
+        width: 65.5%;
+    }
+
+    .nav-link {
+        color: #fff !important;
+    }
+
+    form {
+        width: 82%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .home {
+        overflow: hidden;
+        position: relative;
+        background-image: none !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 100px 0;
+        animation: backgroundSlideIn 2s ease forwards;
+        opacity: 0;
+    }
+
+    .image-effect {
+        transition: transform 0.3s ease, filter 0.3s ease;
+        height: 200px !important;
+    }
+    
+    .image-effect:hover {
+        filter: grayscale(100%);
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+}
+
+    .image-effect-big {
+        transition: transform 0.3s ease, filter 0.3s ease;
+        height: 400px !important;
+        -webkit-transition: transform 0.3s ease, filter 0.3s ease;
+        -moz-transition: transform 0.3s ease, filter 0.3s ease;
+        -ms-transition: transform 0.3s ease, filter 0.3s ease;
+        -o-transition: transform 0.3s ease, filter 0.3s ease;
+}
+    
+    .image-effect-big:hover {
+        filter: grayscale(100%);
+        transform: scale(1.02); /* Skala menjadi 1.02 saat di-hover */
+    }
+
+    .card-skills {
+        width: 100%;
+    }
+
+    .span-brand {
+        color: #fff !important;
+    }
+
+    .span-brand-n {
+        color: #fcc435 !important;
+    }
+
+    .img-portofolio {
+        height: auto; /* Menghapus height pada tampilan mobile */
+    }
+
+    .about-section {
+        opacity: 1;
+        /* Ensure visibility on mobile */
+        transform: translateX(0);
+        /* Disable animation transform on mobile */
+    }
+
+    .row-home {
+        margin-top: 0 !important;
+    }
+
+    .container-fluid {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .navbar-brand {
+        color: #000 !important;
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar.scrolled-navbar {
+        transition: background-color 2s ease;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+}

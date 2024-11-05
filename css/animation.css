@@ -1,0 +1,46 @@
+@keyframes backgroundSlideIn {
+    0% {
+        background-position: 0 -30%;
+        /* Mulai dari bawah */
+        opacity: 0;
+        /* Mulai dari transparan */
+    }
+
+    100% {
+        background-position: 0 0;
+        /* Berhenti di posisi normal */
+        opacity: 1;
+        /* Menjadi terlihat */
+    }
+}
+
+@keyframes navbarSlideIn {
+    0% {
+        transform: translateX(-100%);
+        /* Mulai dari luar layar di sebelah kiri */
+        opacity: 0;
+        /* Mulai dari transparan */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Berhenti di posisi normal */
+        opacity: 1;
+        /* Menjadi terlihat */
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+        -webkit-transform: translateY(200px);
+        -moz-transform: translateY(200px);
+        -ms-transform: translateY(200px);
+        -o-transform: translateY(200px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
