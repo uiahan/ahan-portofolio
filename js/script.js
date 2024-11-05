@@ -11,36 +11,29 @@ window.addEventListener("scroll", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll('.fade-in');
-    const elements2 = document.querySelectorAll('.fade-in2');
-    const elements3 = document.querySelectorAll('.fade-in3');
-    const elements4 = document.querySelectorAll('.fade-in4');
+    const elements = document.querySelectorAll('.fade-in, .fade-in2, .fade-in3, .fade-in4');
     
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-            } else {
-                entry.target.classList.remove("visible");
+                observer.unobserve(entry.target); // Stop observing the element once it’s visible
             }
         });
     }, { threshold: 0.1 });
 
     elements.forEach(el => observer.observe(el));
-    elements2.forEach(el => observer.observe(el));
-    elements3.forEach(el => observer.observe(el));
-    elements4.forEach(el => observer.observe(el));
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const homeSection = document.querySelector('.home');
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-            } else {
-                entry.target.classList.remove("visible");
+                observer.unobserve(entry.target); // Stop observing after the first time it becomes visible
             }
         });
     }, { threshold: 0.1 });
