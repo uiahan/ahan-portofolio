@@ -1,14 +1,30 @@
 window.addEventListener("scroll", function () {
     var navbar = document.querySelector(".navbar");
-    var span = document.querySelector(".span-brand-n");
+    var toggle = document.querySelector("#toggle");  // Referensi ke toggle checkbox
     if (window.scrollY > 50) {
-        navbar.classList.add("scrolled-navbar");
-        span.classList.add("scrolled-navbar");
+        navbar.classList.add("scrolled-navbar"); // Tambahkan kelas scrolled-navbar dan dark
+        // Memastikan checkbox dicentang jika dark mode aktif
+        if (!toggle.checked) {
+            toggle.checked = false;  // Centang checkbox jika scroll lebih dari 50px
+        }
     } else {
-        navbar.classList.remove("scrolled-navbar");
+        navbar.classList.remove("scrolled-navbar");  // Hapus kelas scrolled-navbar dan dark
+    }
+});
+
+document.querySelector("#toggle").addEventListener("change", function () {
+    var navbar = document.querySelector(".navbar");
+    var span = document.querySelector(".span-brand-n");
+
+    if (this.checked) {
+        navbar.classList.add("dark"); // Tambahkan kelas dark jika toggle diaktifkan
+        span.classList.add("scrolled-navbar"); // Sesuaikan dengan efek scroll jika diperlukan
+    } else {
+        navbar.classList.remove("dark");
         span.classList.remove("scrolled-navbar");
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const elements = document.querySelectorAll('.fade-in, .fade-in2, .fade-in3, .fade-in4');
@@ -17,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Stop observing the element once it’s visible
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
@@ -33,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Stop observing after the first time it becomes visible
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
@@ -107,6 +123,79 @@ function applyFadeClass() {
 
 window.addEventListener("load", applyFadeClass);
 window.addEventListener("resize", applyFadeClass);
+
+document.getElementById('toggle').addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.home').classList.toggle('dark-mode'); 
+    document.querySelector('.home-text').classList.toggle('dark'); 
+    document.querySelector('.about-text').classList.toggle('dark'); 
+    document.querySelector('.portofolio').classList.toggle('dark'); 
+    document.querySelector('.body-text').classList.toggle('dark');  
+    document.querySelector('.header-text').classList.toggle('dark');  
+    document.querySelector('.skills').classList.toggle('dark'); 
+    document.querySelector('.dark-text').classList.toggle('dark-mode'); 
+    document.querySelector('.hr').classList.toggle('dark'); 
+    document.querySelector('.gallery').classList.toggle('dark'); 
+    document.querySelector('.contact').classList.toggle('dark'); 
+    document.querySelector('.navbar-brand').classList.toggle('dark-mode'); 
+    document.querySelector('.span-brand-n').classList.toggle('dark-mode'); 
+    document.querySelector('.nav-link').classList.toggle('dark-mode'); 
+    document.querySelector('p').classList.toggle('dark-mode'); 
+    document.querySelector('.navbar').classList.toggle('dark-mode');
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('dark-mode');
+    });
+    // Toggle untuk semua elemen dengan kelas 'header-text2' dan 'body-text2'
+    document.querySelectorAll('.header-text2').forEach(element => {
+        element.classList.toggle('dark');
+    });
+    document.querySelectorAll('.body-text2').forEach(element => {
+        element.classList.toggle('dark');
+    });
+    document.querySelector('.navbar-brand').classList.toggle('dark-mode');
+});
+
+// Selektor elemen toggle dan bagian 'about'
+const toggle = document.getElementById("toggle");
+const aboutSection = document.getElementById("about");
+
+// Tambah atau hapus kelas dark-mode ketika toggle aktif atau non-aktif
+toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+        aboutSection.classList.add("dark-mode");
+    } else {
+        aboutSection.classList.remove("dark-mode");
+    }
+});
+
+document.getElementById('toggle').addEventListener('change', function() {
+    const lightImage = document.getElementById('wave-image');
+    const darkImage = document.getElementById('wave-image-dark');
+
+    if (this.checked) {
+        // Ketika toggle aktif, tampilkan gambar gelap dengan transisi opacity
+        lightImage.style.opacity = '0';
+        darkImage.style.opacity = '1';
+    } else {
+        // Ketika toggle tidak aktif, tampilkan gambar biasa dengan transisi opacity
+        lightImage.style.opacity = '1';
+        darkImage.style.opacity = '0';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

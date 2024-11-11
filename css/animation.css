@@ -1,32 +1,24 @@
 @keyframes backgroundSlideIn {
     0% {
         background-position: 0 -30%;
-        /* Mulai dari bawah */
         opacity: 0;
-        /* Mulai dari transparan */
     }
 
     100% {
         background-position: 0 0;
-        /* Berhenti di posisi normal */
         opacity: 1;
-        /* Menjadi terlihat */
     }
 }
 
 @keyframes navbarSlideIn {
     0% {
         transform: translateX(-100%);
-        /* Mulai dari luar layar di sebelah kiri */
         opacity: 0;
-        /* Mulai dari transparan */
     }
 
     100% {
         transform: translateX(0);
-        /* Berhenti di posisi normal */
         opacity: 1;
-        /* Menjadi terlihat */
     }
 }
 

@@ -1,20 +1,18 @@
 html {
-    
     scroll-behavior: smooth;
-  }
-  
-  body, html {
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+body, html {
+    overflow-x: hidden;
 }
 
 body {
     overflow-y: scroll;
-  }
-  
-  /* Hanya untuk browser berbasis Webkit */
-  ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
     display: none;
-  }
+}
 
 body {
     background-color: #fff;
@@ -31,10 +29,6 @@ p {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.span-brand-n.scrolled-navbar {
-    color: #fcc435 !important;
 }
 
 .fade-in {
@@ -118,14 +112,13 @@ p {
 
 .disabled {
     pointer-events: none;
-    /* Menonaktifkan klik */
 }
 
 .navbar.scrolled-navbar .navbar-brand {
-    color: #000000 !important;
+    color: #000000;
 }
 
-.navbar.scrolled-navbar .span-brand {
+.navbar.scrolled-navbar .span-brand-n {
     color: #fcc435 !important;
 }
 
@@ -151,9 +144,7 @@ p {
 .nav-item .nav-link.active {
     background-color: #fcc435;
     color: #fff !important;
-    /* Warna teks */
     border-radius: 5px;
-    /* Sudut melengkung */
 }
 
 .navbar-brand {
@@ -161,6 +152,7 @@ p {
 }
 
 .home {
+    transition: 1s;
     overflow: hidden;
     position: relative;
     background-image: url("../img/wave (13).svg");
@@ -169,10 +161,10 @@ p {
     padding: 100px 0;
     opacity: 0;
     transition: opacity 0.3s ease;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
 
 .home.visible {
@@ -186,7 +178,7 @@ p {
 }
 
 .img-portofolio {
-    transition: filter 0.3s ease; 
+    transition: filter 0.3s ease;
     -webkit-box-shadow: 0px 0px 7px 1px rgba(252, 196, 53, 1);
     -moz-box-shadow: 0px 0px 7px 1px rgba(252, 196, 53, 1);
     box-shadow: 0px 0px 7px 1px rgba(252, 196, 53, 1);
@@ -195,8 +187,8 @@ p {
 .project-button {
     background-color: #fcc435;
     border-radius: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .project-button:hover {
@@ -204,8 +196,8 @@ p {
     color: #fcc435 !important;
     transition: 0.3s;
     border-radius: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -216,8 +208,8 @@ p {
     border: solid #fcc435 2px;
     color: #fcc435;
     border-radius: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .project-button2:hover {
@@ -225,8 +217,8 @@ p {
     color: #fff;
     transition: 0.3s;
     border-radius: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -238,9 +230,9 @@ p {
     font-size: 1.7rem;
     color: #fcc435;
     margin-right: 8px;
-    width: 4rem; /* Sesuaikan agar tinggi dan lebar tombol sama */
-    height: 4rem; /* Sesuaikan agar tinggi dan lebar tombol sama */
-    display: flex; /* Pusatkan konten di dalam lingkaran */
+    width: 4rem;
+    height: 4rem;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -252,9 +244,9 @@ p {
     color: #fff;
     margin-right: 8px;
     width: 4rem;
-    /*Sesuaikanagartinggidanlebartombolsama*/height: 4rem;
-    /*Sesuaikanagartinggidanlebartombolsama*/display: flex;
-    /*Pusatkankontendidalamlingkaran*/align-items: center;
+    height: 4rem;
+    display: flex;
+    align-items: center;
     justify-content: center;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -267,9 +259,9 @@ p {
     font-size: 1.7rem;
     color: #fff;
     margin-right: 8px;
-    width: 4rem; /* Sesuaikan agar tinggi dan lebar tombol sama */
-    height: 4rem; /* Sesuaikan agar tinggi dan lebar tombol sama */
-    display: flex; /* Pusatkan konten di dalam lingkaran */
+    width: 4rem;
+    height: 4rem;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -291,7 +283,6 @@ p {
     -o-transition: 0.3s;
 }
 
-
 .home {
     overflow: hidden;
     position: relative;
@@ -301,18 +292,224 @@ p {
     padding: 100px 0;
 }
 
+.home-text {
+    transition: 1s;
+    color: #6c757d;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.about-text {
+    transition: 1s;
+    color: #6c757d;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
 .portofolio {
+    transition: 1s;
     overflow: hidden;
     position: relative;
     background-color: #fff;
     padding-top: 7.5rem;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
 
 .auto-height {
     height: auto;
-    min-height: 60px; 
+    min-height: 60px;
 }
+
 #message {
     resize: none;
     overflow-y: auto;
+}
+
+.skills {
+    transition: 1s;
+    overflow: hidden;
+    position: relative;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    background-color: #f2f2f2;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.body-text {
+    color: #6c757d;
+}
+
+.body-text2 {
+    color: #6c757d;
+}
+
+.header-text {
+    color: #000;
+}
+
+.header-text2 {
+    color: #000;
+}
+
+footer li {
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #f6f6f6;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+footer {
+    padding-bottom: 8rem;
+    background-color: #fcc435;
+}
+
+.gallery {
+    transition: 1s;
+    overflow: hidden;
+    position: relative;
+    background-color: #f2f2f2;
+    padding-bottom: 7.5rem;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.card {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.image-effect {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-effect:hover {
+    filter: grayscale(100%);
+    transform: scale(1.02);
+}
+
+.image-effect-big {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-effect-big:hover {
+    filter: grayscale(100%);
+    transform: scale(1.02);
+}
+
+.contact {
+    transition: 1s;
+    padding-top: 7.5rem;
+    padding-bottom: 9rem;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+input {
+    display: none;
+}
+
+label {
+    width: 50px; /* Lebih kecil dari sebelumnya */
+    height: 25px; /* Lebih kecil dari sebelumnya */
+    border-radius: 999px;
+    background: #F3F3F3;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    position: relative;
+}
+
+.circle {
+    width: 20px; /* Lebih kecil dari sebelumnya */
+    height: 20px; /* Lebih kecil dari sebelumnya */
+    border-radius: 50%;
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05),
+                -2px -2px 5px rgba(0, 0, 0, 0.05) inset;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+svg {
+    width: 10px; /* Lebih kecil untuk ikon */
+    position: absolute;
+}
+
+.sun {
+    color: #FFD600;
+    opacity: 1;
+}
+
+.moon {
+    margin-top: -100%;
+    color: white;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked + .display label {
+    background: #1F1F21;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+input[type=checkbox]:checked + .display label .circle {
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background: #2C2C2F;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+                -2px -2px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+input[type=checkbox]:checked + .display label .circle .sun {
+    opacity: 0;
+}
+
+input[type=checkbox]:checked + .display label .circle .moon {
+    margin-top: 0;
+    opacity: 1;
+}
+
+label:active .circle {
+    width: 25px; /* Lebih kecil saat aktif */
 }

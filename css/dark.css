@@ -1,0 +1,207 @@
+:root {
+    --text-color-second: #6c757d; /* Warna teks terang default */
+    --text-color-white: #fff; /* Warna teks gelap */
+}
+
+#wave-image-dark {
+    display: none; /* Gambar gelap disembunyikan secara default */
+}
+
+#wave-image, #wave-image-dark {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  
+
+.navbar.scrolled-navbar.dark {
+    transition: background-color 1s ease, padding 0.3s ease;
+    padding-bottom: 1rem;
+    background-color: rgba(17, 17, 17, 0.5) !important; /* Angka terakhir 0.8 mengatur transparansi */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 1s ease, padding 0.3s ease;
+    -moz-transition: background-color 1s ease, padding 0.3s ease;
+    -ms-transition: background-color 1s ease, padding 0.3s ease;
+    -o-transition: background-color 1s ease, padding 0.3s ease;
+}
+
+.home-text.dark {
+    color: #cbcbcb;
+}
+
+.dark-text {
+    color: var(--text-color-second);
+    transition: color 1s ease;
+}
+
+/* Warna .span-brand-n saat scrolled-navbar dan dark mode aktif */
+.navbar.scrolled-navbar.dark .span-brand-n {
+    color: #fcc435;
+}
+
+.body-text.dark {
+    transition: 1s;
+    color: #cbcbcb;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.body-text2.dark {
+    transition: 1s;
+    color: #cbcbcb;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.contact.dark {
+    padding-top: 7.5rem;
+    padding-bottom: 9rem;
+    transition: 1s;
+    background-color: #111;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.gallery.dark {
+    transition: 1s;
+    overflow: hidden;
+    position: relative;
+    background-color: #222;
+    padding-bottom: 7.5rem;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.header-text.dark {
+    transition: 1s;
+    color: #fff;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.header-text2.dark {
+    transition: 1s;
+    color: #fff;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.dark-text.dark-mode {
+    color: #fff !important;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+}
+
+.home.dark-mode {
+    transition: 1s;
+    overflow: hidden;
+    background-color: #111 !important;
+    position: relative;
+    background-image: url("../img/wave (13).svg");
+    background-size: initial;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+/* Style untuk mode gelap */
+#about.dark-mode .text-secondary,
+#about.dark-mode h3 {
+    color: #fff !important;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+}
+
+.hr.dark {
+    color: #fff;
+}
+
+.navbar.scrolled-navbar.dark .navbar-brand {
+    color: #fff;
+}
+
+/* Style untuk .nav-link dan .span-brand-n saat mode gelap */
+.navbar.dark-mode .nav-link {
+    color: #fff !important; /* Warna putih untuk .nav-link */
+}
+
+.portofolio.dark {
+    overflow: hidden;
+    position: relative;
+    background-color: #111 !important;
+    padding-top: 7.5rem;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.skills.dark {
+    transition: 1s;
+    overflow: hidden;
+    position: relative;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    background-color: #222 !important;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.about-text.dark {
+    color: #cbcbcb;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+/* Default (mode terang): tampilkan gambar biasa */
+#wave-image {
+    display: block;
+}
+
+/* Default (mode terang): sembunyikan gambar mode gelap */
+#wave-image-dark {
+    display: none;
+}
+
+/* Ketika mode gelap aktif, tampilkan gambar gelap dan sembunyikan gambar biasa */
+.dark-mode #wave-image {
+    display: none;
+}
+
+.dark-mode #wave-image-dark {
+    display: block;
+}
+
+
+

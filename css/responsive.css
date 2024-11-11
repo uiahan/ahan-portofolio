@@ -29,13 +29,36 @@
         padding: 100px 0;
         animation: backgroundSlideIn 2s ease forwards;
         opacity: 0;
+        -webkit-animation: backgroundSlideIn 2s ease forwards;
     }
+
+    .navbar.scrolled-navbar.dark .navbar-brand {
+        color: #fff !important;
+    }
+
+    .nav-item .nav-link.active {
+        display: block !important;
+        width: 100% !important;
+        background-color: #fcc435;
+        color: #fff !important;
+        border-radius: 0; /* Hapus border-radius untuk tampilan penuh */
+        padding-left: 4rem; /* Sesuaikan padding sesuai keinginan */
+        padding-right: 4rem; /* Sesuaikan padding sesuai keinginan */
+        text-align: center; /* Opsional, untuk menempatkan teks di tengah */
+    }
+
+    .navbar.scrolled-navbar .nav-link:hover {
+        color: #fff !important;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: #fcc435 !important;
+}
 
     .image-effect {
         transition: transform 0.3s ease, filter 0.3s ease;
         height: 200px !important;
     }
-    
+
     .image-effect:hover {
         filter: grayscale(100%);
         transform: scale(1.02);
@@ -43,7 +66,7 @@
         -moz-transform: scale(1.02);
         -ms-transform: scale(1.02);
         -o-transform: scale(1.02);
-}
+    }
 
     .image-effect-big {
         transition: transform 0.3s ease, filter 0.3s ease;
@@ -52,34 +75,32 @@
         -moz-transition: transform 0.3s ease, filter 0.3s ease;
         -ms-transition: transform 0.3s ease, filter 0.3s ease;
         -o-transition: transform 0.3s ease, filter 0.3s ease;
-}
-    
+    }
+
     .image-effect-big:hover {
         filter: grayscale(100%);
-        transform: scale(1.02); /* Skala menjadi 1.02 saat di-hover */
+        transform: scale(1.02);
     }
 
     .card-skills {
         width: 100%;
     }
 
-    .span-brand {
-        color: #fff !important;
-    }
-
     .span-brand-n {
         color: #fcc435 !important;
     }
 
+    .span-brand-n.dark-mode {
+        color: #fcc435 !important;
+    }
+
     .img-portofolio {
-        height: auto; /* Menghapus height pada tampilan mobile */
+        height: auto;
     }
 
     .about-section {
         opacity: 1;
-        /* Ensure visibility on mobile */
         transform: translateX(0);
-        /* Disable animation transform on mobile */
     }
 
     .row-home {
@@ -93,6 +114,10 @@
 
     .navbar-brand {
         color: #000 !important;
+    }
+
+    .navbar-brand.dark-mode {
+        color: #fff !important;
     }
 
     .navbar {
