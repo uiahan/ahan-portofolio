@@ -135,6 +135,7 @@ document.getElementById('toggle').addEventListener('change', function() {
     document.querySelector('.skills').classList.toggle('dark'); 
     document.querySelector('.dark-text').classList.toggle('dark-mode'); 
     document.querySelector('.hr').classList.toggle('dark'); 
+    document.querySelector('.navbar-toggler-icon').classList.toggle('dark'); 
     document.querySelector('.gallery').classList.toggle('dark'); 
     document.querySelector('.contact').classList.toggle('dark'); 
     document.querySelector('.navbar-brand').classList.toggle('dark-mode'); 

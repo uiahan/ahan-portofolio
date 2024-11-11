@@ -41,10 +41,14 @@
         width: 100% !important;
         background-color: #fcc435;
         color: #fff !important;
-        border-radius: 0; /* Hapus border-radius untuk tampilan penuh */
-        padding-left: 4rem; /* Sesuaikan padding sesuai keinginan */
-        padding-right: 4rem; /* Sesuaikan padding sesuai keinginan */
-        text-align: center; /* Opsional, untuk menempatkan teks di tengah */
+        border-radius: 0;
+        /* Hapus border-radius untuk tampilan penuh */
+        padding-left: 4rem;
+        /* Sesuaikan padding sesuai keinginan */
+        padding-right: 4rem;
+        /* Sesuaikan padding sesuai keinginan */
+        text-align: center;
+        /* Opsional, untuk menempatkan teks di tengah */
     }
 
     .navbar.scrolled-navbar .nav-link:hover {
@@ -52,7 +56,7 @@
         padding-left: 4rem;
         padding-right: 4rem;
         background-color: #fcc435 !important;
-}
+    }
 
     .image-effect {
         transition: transform 0.3s ease, filter 0.3s ease;
@@ -114,16 +118,28 @@
 
     .navbar-brand {
         color: #000 !important;
+        transition: color 0.3s ease;
+        -webkit-transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -ms-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
     }
 
-    .navbar-brand.dark-mode {
+    .dark-mode .navbar-brand {
         color: #fff !important;
     }
 
-    .navbar {
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(15px);
+    .navbar.dark {
+        transition: background-color 1s ease, padding 0.3s ease;
+        padding-bottom: 1rem;
+        background-color: rgba(17, 17, 17, 0.5) !important;
+        /* Angka terakhir 0.8 mengatur transparansi */
+        backdrop-filter: blur(10px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        -webkit-transition: background-color 1s ease, padding 0.3s ease;
+        -moz-transition: background-color 1s ease, padding 0.3s ease;
+        -ms-transition: background-color 1s ease, padding 0.3s ease;
+        -o-transition: background-color 1s ease, padding 0.3s ease;
     }
 
     .navbar.scrolled-navbar {
@@ -133,5 +149,35 @@
         background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(15px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        -webkit-transition: background-color 2s ease;
+        -moz-transition: background-color 2s ease;
+        -ms-transition: background-color 2s ease;
+        -o-transition: background-color 2s ease;
     }
+
+    .navbar {
+        transition: background-color 2s ease;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        -webkit-transition: background-color 2s ease;
+        -moz-transition: background-color 2s ease;
+        -ms-transition: background-color 2s ease;
+        -o-transition: background-color 2s ease;
+    }
+
+    /* Mengubah warna garis pada ikon hamburger menjadi putih */
+.navbar-toggler-icon.dark {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
 }
